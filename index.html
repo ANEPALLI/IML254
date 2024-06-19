@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="This website created as to complete my individual assignment IML254 as a library informatics student (CDIM144).">
+      <meta name="keywords" content="personal details, my self, photos, video, personal informations, profiles, favourite, biodata, education, hobbies">
+      <meta name="author" content="Muhammad Hanif Aiman Bin Kamaruzaman">
+      <title>My Personal Website</title>
+
+<style>
+	body, html {
+	    margin: 0;
+	    padding: 0;
+	    height: 100%;
+	    width: 100%;
+	    font-family: courier;
+	    font-size: 18px;
+	}
+
+	.container {
+	    display: flex;
+	    flex-direction: column;
+	    height: 100%;
+	}
+
+	.row {
+	    border: 1px solid #ccc;
+	}
+
+	.header {
+	    flex: 0 0 60px;
+	    background-color: #000022;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 0 20px; 
+	}
+
+	.content {
+	    flex: 1;
+	    position: relative;
+	    overflow: hidden;
+	}
+
+	.content video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+	.footer {
+	    flex: 0 40px;
+	    background-color: #000022;
+	    color: #fff;
+	    text-align: center;
+	    padding: 10px 0;
+	}
+
+	.footer p {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.footer-icons {
+	    display: flex;
+	    justify-content: center;
+	    gap: 30px;
+	    margin-top: 6px;
+	}
+
+	.footer-icons img {
+	    height: 30px;
+	    width: 30px;
+	}
+
+	iframe {
+	    width: 100%;
+	    height: 100%;
+	    border: none;
+	    z-index: 1;
+	    position: relative;
+	}
+
+	.nav {
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    height: 100%;
+	}
+
+	.nav a, .nav .chat-icon {
+	    text-decoration: none;
+	    color: #fff;
+	    padding: 10px;
+	    display: flex;
+	    align-items: center;
+	}
+
+	.nav a:hover, .nav .chat-icon:hover {
+	    background-color: #e28413;
+	    color: #000;
+	}
+
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #e28413;
+	    min-width: 130px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 9999;
+	}
+
+	.dropdown-content a {
+	    color: #000;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+
+	.dropdown-content a:hover {
+	    background-color: #fff;
+	}
+
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+	    background-color: #e28413;
+	}
+
+	.logo {
+	    height: 120px;
+	    padding: 10px;
+	}
+
+	.chat-icon img {
+	    height: 24px;
+	    width: 24px;
+	    margin-left: 10px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="container">
+	    <div class="row header">
+		<a href="index.html"><img src="image/LOGO.png" alt="Logo" class="logo"></a>
+		<div class="nav">
+		    <a href="home.html" target="content-frame">Home</a>
+		    <div class="dropdown">
+		         <a href="biodata.html" target="content-frame" class="dropbtn">Biodata</a>
+		         <div class="dropdown-content">
+		    	      <a href="education.html" target="content-frame">Education</a>
+	   	              <a href="hobbies.html" target="content-frame">Hobbies</a>
+			      <a href="family.html" target="content-frame">Family</a>
+		         </div>
+		    </div>
+		    <a href="friends.html" target="content-frame">Friends</a>
+		    <a href="favourite.html" target="content-frame">Favourite</a>
+		    <div class="dropdown">
+		    	 <a href="#" class="dropbtn">Gallery</a>
+		    	 <div class="dropdown-content">
+			      <a href="sunset.html" target="content-frame">Sunset</a>
+			      <a href="night.html" target="content-frame">Night views</a>
+			 </div>
+		    </div>
+		    <a href="mailto:hanifaiman2004@gmail.com" class="chat-icon" title="chat with me">
+		    <img src="image/icon.png" alt="chat icon"></a>
+	        </div>
+	    </div>
+	    <div class="row content">
+		<video autoplay muted loop>
+	    	     <source src="image/welcomevid.mp4" type="video/mp4">
+	    	</video>
+		<iframe name="content-frame"></iframe>
+	    </div>
+	    <div class="row footer">
+		<p>&copy; 2024 Muhammad Hanif Aiman Bin Kamaruzaman. All rights reserved.</p>
+	    </div>
+	</div>
+</body>
+</html>

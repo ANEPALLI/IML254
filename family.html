@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This Website created as to complete my individual assignment IML254 as a Library Informatics student (CDIM144).">
+    <meta name="keywords" content="my family, hashim family, anakcucumatrambai, ACMR, UiTM kedah, photos, videos, location">
+    <meta name="author" content="Muhammad Hanif Aiman Bin Kamaruzaman">
+    <title>Family - My Personal Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 3;
+            color: #fff;
+            line-height: 1.6;
+            background-image: url('image/gradient_bg.png');
+            background-attachment: fixed; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: auto;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .container-text {
+            width: auto;
+            margin: 0 auto;
+            color: #000;
+            text-align: center;
+            padding: 5px;
+            font-family: courier;
+            font-size: 100px;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .logo {
+            float: left;
+            padding: 10px 50px;
+        }
+
+        .nav-links {
+            float: right;
+            list-style-type: none;
+            padding: 40px 40px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 10px; 
+        }
+
+        .slideshow-container img.active {
+            display: block;
+        }
+
+        .prev {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+            left: 5px;
+        }
+
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+            right: 5px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Indicator styles */
+        .indicator-container {
+            text-align: center;
+            position: relative;
+            top: -30px;
+        }
+
+        .indicator {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .indicator.active {
+            background-color: #717171;
+        }
+
+        .family-description {
+            padding: 20px;
+            text-align: left;
+            background-color: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        main .education {
+            padding: 50px;
+            text-align: center;
+        }
+
+        main .education-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .education-content .education-text {
+            max-width: 700px;
+            margin: 40px;
+            text-align: center;
+        }
+
+        main .education-content .education-text h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #FFF;
+            padding: 20px 40px;
+            width: auto;
+            position: bottom;
+            bottom: 0;
+        }
+
+        main .family {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main .family-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .family-content .family-text {
+            max-width: 600px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        main .family-content .family-text h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .banner {
+            background-image: url("banner.gif");
+            background-size: contain;
+            background-position: center;
+            height: auto; 
+            text-align: center;
+            color: #fff;
+            padding-top: 100px; 
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 50px;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .family-img {
+            border-radius: 20px;
+            width: 400px;
+            height: 500px;
+            margin: 10px;
+        }
+
+        .family-member-heading {
+            font-size: 40px;
+            font-family: Algerian, sans-serif;
+            text-align: center;
+	    color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <hr>
+    <section class="container">
+        <div class="container-text"><i><b>My Family</b></i></div>
+    </section>
+    <hr>
+    <table style="background-position: center; width: 100%;" align="center" cellpadding="5" cellspacing="5">        
+        <tr align="center">
+            <td>
+                <section class="family">
+                    <h1>MY FAMILY</h1>
+                    <div class="family-content">
+                        <div class="family-text">
+                            <p>Both the Hashim family, which included my mother and eight other siblings, and Anak Cucu Mat Rambai, who had thirteen siblings total, left behind legacies that I find particularly meaningful. Through the years, these families have demonstrated resiliency and unity. Their rich tapestry of stories inspires us to treasure our heritage and the ties that bind us as a family since they have upheld traditions, faced obstacles, and celebrated victories together since their modest beginnings.</p>
+                        </div>
+                    </div>
+                </section>
+            </td>
+            <td>
+                <section class="slideshow-container">
+                    <img src="image/family.jpg" class="active" alt="Family Mat Rambai">
+                    <img src="image/hashim family.jpg" alt="Family 1">
+                    <img src="image/keluarga kecil.jpg" alt="Keluarga Kecil">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    <div class="indicator-container">
+                        <span class="indicator active" onclick="currentSlide(0)"></span>
+                        <span class="indicator" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                    </div>
+                </section>
+            </td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; margin-top: 20px;">
+        <hr><h1 class="family-member-heading">MY FAMILY MEMBER</h1><hr>
+	<tr>
+            <td style="text-align: center;">
+                <img src="image/parent.jpg" alt="Parents" class="family-img">
+                <p>NAME: Kamaruzaman bin Mamat</p>
+		<p><b>my dad:</b> Our pillars of strength and love. But sadly my dad was died 2021</p>
+            </td>
+            <td style="text-align: center;">
+               <img src="image/umi.jpg" alt="Umi" class="family-img">
+		<p>NAME: Zaitun binti Hashim</p>
+                <p><b>Umi:</b> The heart of our family, always caring and supportive.</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <img src="image/sister.jpg" alt="Sister" class="family-img">
+		<p>NAME:Nurul Khairunnisa Binti Kamaruzaman </p>
+                <p><b>Sister:</b> My sibling, a source of inspiration and joy.</p>
+
+	    </td>
+            <td style="text-align: center;">
+		<img src="image/hafiz.jpg" alt="Hafiz" class="family-img">
+		<p>NAME: Muhammad Hafiz Aiman Bin Kamaruzaman</p>
+                <p><b>brother:</b> That's my twin, passionate about learning and exploring.</p>
+            </td>
+        </tr>
+    </table>
+</main>
+
+<section class="banner">
+    <h1>Links Video raya From my cousin <u><i>Firdaus Jamaluddin</i></u></h1> 
+    <a href="https://www.youtube.com/watch?v=X1AAb6gCHow" target="_blank"><img src="image/family.jpg" width="70%"></a>
+</section>
+
+<center><section class="education">
+    <div class="education-content">
+        <div class="education-text">
+            <a href="biodata.html" class="btn">BIODATA</a>
+            <a href="education.html" class="btn">EDUCATION</a>
+            <a href="hobbies.html" class="btn">HOBBIES</a>
+        </div>
+    </div>
+</section></center>
+
+<script>
+    const slides = document.querySelectorAll('.slideshow-container img');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlideIndex = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            indicators[i].classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                indicators[i].classList.add('active');
+            }
+        });
+    }
+
+    function changeSlide(n) {
+        clearInterval(slideInterval); // Clear the interval to reset the timer
+        currentSlideIndex = (currentSlideIndex + n + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+        slideInterval = setInterval(nextSlide, 3000); // Restart the interval
+    }
+
+    function currentSlide(index) {
+        clearInterval(slideInterval); // Clear the interval to reset the timer
+        currentSlideIndex = index;
+        showSlide(currentSlideIndex);
+        slideInterval = setInterval(nextSlide, 3000); // Restart the interval
+    }
+
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
+    slideInterval = setInterval(nextSlide, 3000); // Change image every 3 seconds
+</script>
+</body>
+</html>

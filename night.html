@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This Website created as to complete my individual assignment IML254 as a Library Informatics student (CDIM144).">
+    <meta name="keywords" content="gallery, sunset, night, photos, videos, location">
+    <meta name="author" content="Muhammad Hanif Aiman Bin Kamaruzaman">
+    <title>Night views Gallery - My Personal Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background: url('image/gradient_bg.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .row {
+            border: 1px solid #ccc;
+        }
+
+        .header {
+            flex: 0 0 60px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .footer {
+            flex: 0 0 40px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav a, .nav .chat-icon, .nav .email-icon {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a:hover, .nav .chat-icon:hover, .nav .email-icon:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 130px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+        }
+
+        .logo {
+            height: 40px;
+            padding: 10px;
+        }
+
+        .chat-icon img, .email-icon img {
+            height: 24px;
+            width: 24px;
+            margin-left: 10px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.5s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.25);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row content">
+            <h1><center>Night Views Gallery</center></h1>
+            <div class="gallery">
+                <img src="image/night1.jpg" alt="Night 1">
+                <img src="image/night2.jpg" alt="Night 2">
+                <img src="image/night3.jpg" alt="Night 3">
+                <img src="image/night4.jpg" alt="Night 4">
+                <img src="image/night5.jpg" alt="Night 5">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

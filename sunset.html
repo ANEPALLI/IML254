@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This Website created as to complete my individual assignment IML254 as a Library Informatics student (CDIM144).">
+    <meta name="keywords" content="gallery, sunset, night, photos, videos, location">
+    <meta name="author" content="Muhammad Hanif Aiman Bin Kamaruzaman">
+    <title>Sunset Gallery - My Personal Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background: url('image/gradient_bg.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.25);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            flex-shrink: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sunset Gallery</h1>
+        <div class="gallery">
+            <img src="image/sunset1.jpg" alt="Sunset 1">
+            <img src="image/sunset2.jpg" alt="Sunset 2">
+            <img src="image/sunset3.jpg" alt="Sunset 3">
+            <img src="image/sunset4.jpg" alt="Sunset 4">
+            <img src="image/sunset5.jpg" alt="Sunset 5">
+        </div>
+    </div>
+
+</body>
+</html>
